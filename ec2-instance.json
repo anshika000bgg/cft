@@ -6,10 +6,6 @@
       "Type": "String",
       "Description": "Instance Type"
     },
-    "SecurityGroups": {
-      "Type": "String",
-      "Description": "Security Group Id"
-    },
     "KeyName": {
       "Type": "AWS::EC2::KeyPair::KeyName",
       "Description": "EC2 Key Pair"
