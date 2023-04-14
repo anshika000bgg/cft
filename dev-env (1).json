@@ -12,7 +12,7 @@
     "Fn::Transform": {
       "Name": "AWS::Include",
       "Parameters": {
-        "Location": "s3://cft.templates/parameters.json"
+        "Location": "parameters (4).json"
       } 
     }
   },
