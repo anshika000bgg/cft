@@ -1,0 +1,10 @@
+{
+  "ParametersMap": {
+    "dev": {
+      "OperationsEmail": "anshika.1.a@coforge.com",
+      "Environment": "dev",
+      "EC2InstanceType": "t2.micro",
+      "EC2KeyName": "web-server-key"
+    }
+  }
+}
