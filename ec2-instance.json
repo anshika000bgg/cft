@@ -1,0 +1,36 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "AWS CloudFormation for EC2 Instance",
+  "Parameters": {
+    "InstanceType": {
+      "Type": "String",
+      "Description": "Instance Type"
+    },
+    "SecurityGroups": {
+      "Type": "String",
+      "Description": "Security Group Id"
+    },
+    "KeyName": {
+      "Type": "AWS::EC2::KeyPair::KeyName",
+      "Description": "EC2 Key Pair"
+    },
+    "ImageId": {
+      "Type": "String",
+      "Description": "EC2 AMI Image Id"
+    }
+  },
+  "Resources": {
+    "EC2Instance": {
+      "Type" : "AWS::EC2::Instance",
+      "Properties" : {
+        "InstanceType" : { "Ref" : "InstanceType" },
+        
+        "KeyName" : { "Ref" : "KeyName" },
+        "ImageId" : { "Ref" : "ImageId" }
+      }
+    
+  }
+  
+    }
+  }
+
