@@ -1,0 +1,37 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "AWS CloudFormation Template to Create EC2, S3, SG, SNS",
+  "Parameters": {
+    "Environment": {
+      "Type": "String",
+      "Description": "Type of Environment to create",
+      "Default": "dev"
+    }
+  },
+  "Mappings": {
+    "Fn::Transform": {
+      "Name": "AWS::Include",
+      "Parameters": {
+        "Location": "s3://cft.templates/parameters.json"
+      } 
+    }
+  },
+  "Resources": {
+    "Blueprint": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.ap-south-1.amazonaws.com/cft.templates/blueprint.json",
+        "Parameters": {
+          "EnvironmentName": { "Ref": "AWS::StackName" },
+          "AWSRegion": { "Ref": "AWS::Region" },
+          "Environment": { "Ref": "Environment" },
+          "NotificationEmail": { "Fn::FindInMap" : [ "ParametersMap", { "Ref": "Environment" }, "OperationsEmail"] },
+          "EC2InstanceType": { "Fn::FindInMap" : [ "ParametersMap", { "Ref": "Environment" }, "EC2InstanceType"] },
+          "KeyName": { "Fn::FindInMap" : [ "ParametersMap", { "Ref": "Environment" }, "EC2KeyName"] }
+          
+
+        }
+      }
+    }
+  }
+}
