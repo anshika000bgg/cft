@@ -1,0 +1,12 @@
+{
+  "sandbox": {
+    "TemplatePath": "TEMPLATE_PATH_PLACEHOLDER",
+      "Environment": "dev",
+      "AvailabilityZones": "eu-west-1a",
+      "SubnetId1": "subnet-08db8be2ed806340e",
+      "SubnetId2": "subnet-0af90c1bb889719ae",
+      "Protocol": "TCP",
+      "SimpleADPriIP":"10.0.0.18",
+      "SimpleADSecIP": "10.0.0.19"
+  }
+}
