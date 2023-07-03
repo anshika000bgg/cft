@@ -6,7 +6,7 @@
       "SubnetId1": "subnet-08db8be2ed806340e",
       "SubnetId2": "subnet-0af90c1bb889719ae",
       "Protocol": "TCP",
-      "SimpleADPriIP":"10.0.0.18",
-      "SimpleADSecIP": "10.0.0.19"
+      "SimpleADPriIP":"15.206.187.36",
+      "SimpleADSecIP": "3.111.32.72"
   }
 }
